@@ -1,13 +1,11 @@
-# This file is the "execution plan" - where, when, and how to build.
-# This version has been updated with the correct GA syntax for upstream_input.
-
 identity_token "aws" {
   audience = ["aws.workload.identity"]
 }
 
-# This is the magic of Linked Stacks. It uses the new 'source' attribute.
+# This is the magic of Linked Stacks. It uses both 'source' and 'type'.
 # Replace the org and project names with your exact values from the HCP UI.
 upstream_input "main_vpc" {
+  type   = "stack"
   source = "app.terraform.io/Vearadyn/Inculta Charis/tfstacks-vpc-eks-hashibank"
 }
 
