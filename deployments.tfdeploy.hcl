@@ -6,7 +6,7 @@ identity_token "aws" {
 # Replace the org and project names with your exact values from the HCP UI.
 upstream_input "main_vpc" {
   type   = "stack"
-  source = "app.terraform.io/Vearadyn/Inculta Charis/tfstacks-vpc-eks-hashibank"
+  source = "app.terraform.io/Vearadyn/Aeyuthira/tfstacks-vpc-eks-hashibank"
 }
 
 deployment "app_security" {
