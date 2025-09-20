@@ -10,6 +10,7 @@ upstream_input "main_vpc" {
 }
 
 deployment "app_security" {
+  destroy=true
   inputs = {
     # It now correctly references the 'vpc_id' output from the upstream source.
     vpc_id             = upstream_input.main_vpc.vpc_id
